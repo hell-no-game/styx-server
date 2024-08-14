@@ -1,0 +1,43 @@
+# scala-cli, bloop, Metals
+.bsp/
+.bloop/
+.metals/
+.scala-build/
+project/metals.sbt
+
+# VS Code
+.vscode/
+
+# Scala 3
+.tasty
+
+# SBT
+project/project/
+project/target/
+target/
+
+# Eclipse
+build/
+.classpath
+.project
+.settings
+.worksheet
+bin/
+.cache
+
+# Intelli-J IDEA
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+
+# MAC OS
+.DS_Store
+
+# MISC
+.history
+.scala_dependencies
+.cache-main
+
+*.class
