@@ -9,7 +9,7 @@ lazy val root = (project in file("."))
     organization := "io.github.hell-no-game",
     name := "styx",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "3.3.3",
+    scalaVersion := "3.4.1",
     libraryDependencies ++= Seq(
       "org.http4s"      %% "http4s-ember-server" % Http4sVersion,
       "org.http4s"      %% "http4s-ember-client" % Http4sVersion,

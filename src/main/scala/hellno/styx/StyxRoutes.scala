@@ -8,23 +8,15 @@ import org.http4s.dsl.Http4sDsl
 object StyxRoutes:
 
   def jokeRoutes[F[_]: Sync](J: Jokes[F]): HttpRoutes[F] =
-    val dsl = new Http4sDsl[F]{}
+    val dsl = new Http4sDsl[F] {}
     import dsl.*
-    HttpRoutes.of[F] {
+    HttpRoutes.of[F]:
       case GET -> Root / "joke" =>
-        for {
-          joke <- J.get
-          resp <- Ok(joke)
-        } yield resp
-    }
+        J.get >>= (Ok(_))
 
   def helloWorldRoutes[F[_]: Sync](H: HelloWorld[F]): HttpRoutes[F] =
-    val dsl = new Http4sDsl[F]{}
+    val dsl = new Http4sDsl[F] {}
     import dsl.*
-    HttpRoutes.of[F] {
+    HttpRoutes.of[F]:
       case GET -> Root / "hello" / name =>
-        for {
-          greeting <- H.hello(HelloWorld.Name(name))
-          resp <- Ok(greeting)
-        } yield resp
-    }
+        H.hello(HelloWorld.Name(name)) >>= (Ok(_))
