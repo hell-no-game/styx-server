@@ -1,4 +1,4 @@
-package styx
+package hellno.styx
 
 import cats.effect.Async
 import cats.syntax.all.*

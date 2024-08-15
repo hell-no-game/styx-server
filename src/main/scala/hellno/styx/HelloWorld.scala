@@ -1,4 +1,4 @@
-package styx
+package hellno.styx
 
 import cats.Applicative
 import cats.syntax.all.*
